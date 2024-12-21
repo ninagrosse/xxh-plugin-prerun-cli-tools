@@ -1,4 +1,4 @@
-Collection of cli-tools I use with [xxh](https://github.com/xxh/xxh). There are plugins for some of the tools already, but I prefer to have a collection of all tools I use in one plugin tailored to my needs. 
+Collection of cli-tools I use with [xxh](https://github.com/xxh/xxh), inspired by my [dotfiles](https://github.com/ninagrosse/dotfiles). There are plugins for some of the tools already, but I prefer to have a collection of all tools I use in one plugin tailored to my needs. 
 
 Use in conjunction with [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/ninagrosse/xxh-plugin-zsh-ohmyzsh) to have some handy aliases, as well as preconfigured settings and oh-my-zsh plugins.
 
