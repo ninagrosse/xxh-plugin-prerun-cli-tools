@@ -94,6 +94,17 @@ build() {
   tar -xf lf-*.tar.gz
   chmod +x lf
   rm -f lf-*.*
+
+
+  # starship
+  echo "Downloading starship..."
+  _target="x86_64-unknown-linux-musl"
+  rm -f starship
+
+  curl -s https://api.github.com/repos/starship/starship/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
+  tar -xf starship-*.tar.gz
+  chmod +x starship
+  rm -f starship-*.*
 }
 
 cmd_chk() {

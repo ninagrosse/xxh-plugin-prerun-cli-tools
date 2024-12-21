@@ -12,8 +12,7 @@ Tools alsready included are marked ✅. Others are still work in progress.
 | fzf       | A command-line fuzzy finder           | [GitHub](https://github.com/junegunn/fzf)            | ✅      |
 | httpie    | A better `curl` for using APIs        | [Website](https://httpie.io/docs/cli/installation)   | ✅      |
 | lf        | Terminal File Manager                 | [GitHub](https://github.com/gokcehan/lf)             | ✅      |
-| nnn       | Terminal File Manager                 | [GitHub](https://github.com/jarun/nnn)               |          |
-| starship  | Cross-Platform shell prompt           | [Website](https://starship.rs/guide/)                |          |
+| starship  | Cross-Platform shell prompt           | [Website](https://starship.rs/guide/)                | ✅      |
 | ugrep     | Alternative to `grep`                 | [Website](https://ugrep.com/)                        |          |
 | zoxide    | A smart `cd`                          | [GitHub](https://github.com/ajeetdsouza/zoxide)      |          |
 
