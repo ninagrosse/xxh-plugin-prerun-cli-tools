@@ -84,6 +84,14 @@ build() {
   tar -xf fzf-*.tar.gz
   chmod +x fzf
   rm -f fzf-*.*
+
+  # httpie
+  echo "Downloading httpie..."
+  rm -f http*
+
+  curl -L -o http https://packages.httpie.io/binaries/linux/http-latest
+  ln -s ./http ./https
+  chmod +x ./http ./https
 }
 
 cmd_chk() {
