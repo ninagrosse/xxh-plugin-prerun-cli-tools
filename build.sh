@@ -32,18 +32,32 @@ build() {
 
   cd $build_dir
 
-  # The logic is from https://github.com/ajeetdsouza/zoxide/blob/06062e92ca591a3758f2d69c9b1cd772a6a378b0/install.sh
-
+  # bat
   echo "Downloading bat..."
   _cputype="x86_64"
   _clibtype="musl"
   _ostype=unknown-linux-$_clibtype
-  _target="$_cputype-$_ostype"
-  rm -rf "zoxide-$_target"
+  _target="$_cputype-$_ostype" # x86_64-unknown-linux-musl
+  rm -f bat
 
   curl -s https://api.github.com/repos/sharkdp/bat/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
   tar -xf bat-*.tar.gz --strip-components=1 --wildcards "*/bat"
   chmod +x bat
+  rm -f bat-*.tar.gz
+
+
+  # eza
+  echo "Downloading eza..."
+  _cputype="x86_64"
+  _clibtype="musl"
+  _ostype=unknown-linux-$_clibtype
+  _target="$_cputype-$_ostype" # x86_64-unknown-linux-musl
+  rm -f eza
+
+  curl -s https://api.github.com/repos/eza-community/eza/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
+  tar -xf eza_*.tar.gz --strip-components=1 --wildcards "*/eza"
+  chmod +x eza
+  rm -f eza_*.*
 
 }
 
