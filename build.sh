@@ -34,10 +34,7 @@ build() {
 
   # bat
   echo "Downloading bat..."
-  _cputype="x86_64"
-  _clibtype="musl"
-  _ostype=unknown-linux-$_clibtype
-  _target="$_cputype-$_ostype" # x86_64-unknown-linux-musl
+  _target="x86_64-unknown-linux-musl"
   rm -f bat
 
   curl -s https://api.github.com/repos/sharkdp/bat/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
@@ -48,10 +45,7 @@ build() {
 
   # eza
   echo "Downloading eza..."
-  _cputype="x86_64"
-  _clibtype="musl"
-  _ostype=unknown-linux-$_clibtype
-  _target="$_cputype-$_ostype" # x86_64-unknown-linux-musl
+  _target="x86_64-unknown-linux-musl"
   rm -f eza
 
   curl -s https://api.github.com/repos/eza-community/eza/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
@@ -59,12 +53,10 @@ build() {
   chmod +x eza
   rm -f eza_*.*
 
+
   # fd
   echo "Downloading fd..."
-  _cputype="x86_64"
-  _clibtype="musl"
-  _ostype=unknown-linux-$_clibtype
-  _target="$_cputype-$_ostype" # x86_64-unknown-linux-musl
+  _target="x86_64-unknown-linux-musl"
   rm -f fd
 
   curl -s https://api.github.com/repos/sharkdp/fd/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
@@ -72,11 +64,9 @@ build() {
   chmod +x fd
   rm -f fd-*.*
 
+
   # fzf
   echo "Downloading fzf..."
-  _cputype="x86_64"
-  _clibtype="musl"
-  _ostype=unknown-linux-$_clibtype
   _target="linux_amd64"
   rm -f fzf
 
@@ -85,6 +75,7 @@ build() {
   chmod +x fzf
   rm -f fzf-*.*
 
+
   # httpie
   echo "Downloading httpie..."
   rm -f http*
@@ -92,6 +83,17 @@ build() {
   curl -L -o http https://packages.httpie.io/binaries/linux/http-latest
   ln -s ./http ./https
   chmod +x ./http ./https
+
+
+  # lf
+  echo "Downloading lf..."
+  _target="linux-amd64"
+  rm -f lf
+
+  curl -s https://api.github.com/repos/gokcehan/lf/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
+  tar -xf lf-*.tar.gz
+  chmod +x lf
+  rm -f lf-*.*
 }
 
 cmd_chk() {
