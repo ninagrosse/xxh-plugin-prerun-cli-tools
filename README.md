@@ -8,7 +8,7 @@ Tools alsready included are marked ✅. Others are still work in progress.
 | --------- | ------------------------------------- | -----------------------------------------------------| -------- |
 | bat       | Alternative to `cat`                  | [GitHub](https://github.com/sharkdp/bat)             | ✅      |
 | eza       | Alternative to `ls`                   | [GitHub](https://github.com/eza-community/eza)       | ✅      |
-| fd        | Alternative to `find`                 | [GitHub](https://github.com/sharkdp/fd)              |          |
+| fd        | Alternative to `find`                 | [GitHub](https://github.com/sharkdp/fd)              | ✅      |
 | fzf       | A command-line fuzzy finder           | [GitHub](https://github.com/junegunn/fzf)            |          |
 | httpie    | A better `curl` for using APIs        | [Website](https://httpie.io/docs/cli/installation)   |          |
 | lf        | Terminal File Manager                 | [GitHub](https://github.com/gokcehan/lf)             |          |

@@ -59,6 +59,18 @@ build() {
   chmod +x eza
   rm -f eza_*.*
 
+  # fd
+  echo "Downloading fd..."
+  _cputype="x86_64"
+  _clibtype="musl"
+  _ostype=unknown-linux-$_clibtype
+  _target="$_cputype-$_ostype" # x86_64-unknown-linux-musl
+  rm -f fd
+
+  curl -s https://api.github.com/repos/sharkdp/fd/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
+  tar -xf fd-*.tar.gz --strip-components=1 --wildcards "*/fd"
+  chmod +x fd
+  rm -f fd-*.*
 }
 
 cmd_chk() {
