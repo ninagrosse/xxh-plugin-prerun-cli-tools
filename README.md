@@ -1,6 +1,6 @@
 Collection of cli-tools I use with [xxh](https://github.com/xxh/xxh). There are plugins for some of the tools already, but I prefer to have a collection of all tools I use in one plugin tailored to my needs. 
 
-Use in conjunction with [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/ninagrosse/xxh-plugin-zsh-ohmyzsh) and [ninagrosse/xxh-plugin-prerun-dotfiles](https://github.com/ninagrosse/xxh-plugin-prerun-dotfiles) to have some handy aliases, as well as preconfigured settings and oh-my-zsh plugins.
+Use in conjunction with [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/ninagrosse/xxh-plugin-zsh-ohmyzsh) to have some handy aliases, as well as preconfigured settings and oh-my-zsh plugins.
 
 ## Included Tools
 
@@ -16,7 +16,7 @@ Use in conjunction with [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/n
 | zoxide    | A smart `cd`                          | [GitHub](https://github.com/ajeetdsouza/zoxide)      |
 
 > [!IMPORTANT]
-> Initialization of `starship` and `zoxide` is not handled in `pluginrc`! This happens in my xxh dotfiles.
+> Initialization of `starship` and `zoxide` is not handled in `pluginrc`! This happens in [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/ninagrosse/xxh-plugin-zsh-ohmyzsh).
 
 ## Install
 ```shell
