@@ -105,6 +105,17 @@ build() {
   tar -xf starship-*.tar.gz
   chmod +x starship
   rm -f starship-*.*
+
+
+  # zoxide
+  echo "Downloading zoxide..."
+  _target="x86_64-unknown-linux-musl"
+  rm -f zoxide
+
+  curl -s https://api.github.com/repos/ajeetdsouza/zoxide/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
+  tar -xf zoxide-*.tar.gz zoxide
+  chmod +x zoxide
+  rm -f zoxide-*.*
 }
 
 cmd_chk() {

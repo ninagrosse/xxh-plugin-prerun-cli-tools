@@ -13,8 +13,7 @@ Tools alsready included are marked ✅. Others are still work in progress.
 | httpie    | A better `curl` for using APIs        | [Website](https://httpie.io/docs/cli/installation)   | ✅      |
 | lf        | Terminal File Manager                 | [GitHub](https://github.com/gokcehan/lf)             | ✅      |
 | starship  | Cross-Platform shell prompt           | [Website](https://starship.rs/guide/)                | ✅      |
-| ugrep     | Alternative to `grep`                 | [Website](https://ugrep.com/)                        |          |
-| zoxide    | A smart `cd`                          | [GitHub](https://github.com/ajeetdsouza/zoxide)      |          |
+| zoxide    | A smart `cd`                          | [GitHub](https://github.com/ajeetdsouza/zoxide)      | ✅      |
 
 ## Install
 ```shell
