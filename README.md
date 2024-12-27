@@ -12,6 +12,7 @@ Use in conjunction with [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/n
 | fzf       | A command-line fuzzy finder           | [GitHub](https://github.com/junegunn/fzf)            |
 | httpie    | A better `curl` for using APIs        | [Website](https://httpie.io/docs/cli/installation)   |
 | lf        | Terminal File Manager                 | [GitHub](https://github.com/gokcehan/lf)             |
+| ripgrep   | Alternative to `grep`                 | [GitHub](https://github.com/BurntSushi/ripgrep)      |
 | starship  | Cross-Platform shell prompt           | [Website](https://starship.rs/guide/)                |
 | zoxide    | A smart `cd`                          | [GitHub](https://github.com/ajeetdsouza/zoxide)      |
 
