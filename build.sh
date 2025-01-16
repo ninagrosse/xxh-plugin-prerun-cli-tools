@@ -1,12 +1,12 @@
 #!/usr/bin/env bash
 
 main() {
-	need_cmd curl
-	need_cmd grep
-	need_cmd cut
-	need_cmd xargs
-	need_cmd chmod
-	build
+  need_cmd curl
+  need_cmd grep
+  need_cmd cut
+  need_cmd xargs
+  need_cmd chmod
+  build
 }
 
 build() {
@@ -14,13 +14,11 @@ build() {
   CDIR="$(cd "$(dirname "$0")" && pwd)"
   build_dir=$CDIR/build
 
-  while getopts A:K:q option
-  do
-    case "${option}"
-    in
-      q) QUIET=1;;
-      A) ARCH=${OPTARG};;
-      K) KERNEL=${OPTARG};;
+  while getopts A:K:q option; do
+    case "${option}" in
+    q) QUIET=1 ;;
+    A) ARCH=${OPTARG} ;;
+    K) KERNEL=${OPTARG} ;;
     esac
   done
 
@@ -42,7 +40,6 @@ build() {
   chmod +x bat
   rm -f bat-*.tar.gz
 
-
   # eza
   echo "Downloading eza..."
   _target="x86_64-unknown-linux-musl"
@@ -52,7 +49,6 @@ build() {
   tar -xf eza_*.tar.gz --strip-components=1 --wildcards "*/eza"
   chmod +x eza
   rm -f eza_*.*
-
 
   # fd
   echo "Downloading fd..."
@@ -64,7 +60,6 @@ build() {
   chmod +x fd
   rm -f fd-*.*
 
-
   # fzf
   echo "Downloading fzf..."
   _target="linux_amd64"
@@ -75,7 +70,6 @@ build() {
   chmod +x fzf
   rm -f fzf-*.*
 
-
   # httpie
   echo "Downloading httpie..."
   rm -f http*
@@ -84,17 +78,15 @@ build() {
   ln -s ./http ./https
   chmod +x ./http ./https
 
+  # yazi
+  echo "Downloading yazi..."
+  _target="x86_64-unknown-linux-musl"
+  rm -f yazi ya
 
-  # lf
-  echo "Downloading lf..."
-  _target="linux-amd64"
-  rm -f lf
-
-  curl -s https://api.github.com/repos/gokcehan/lf/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
-  tar -xf lf-*.tar.gz
-  chmod +x lf
-  rm -f lf-*.*
-
+  curl -s https://api.github.com/repos/sxyazi/yazi/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
+  uunzip -j yazi-*.zip yazi-x86_64-unknown-linux-musl/ya yazi-x86_64-unknown-linux-musl/yazi
+  chmod +x yazi ya
+  rm -f yazi-*.zip
 
   # ripgrep
   echo "Downloading ripgrep..."
@@ -106,7 +98,6 @@ build() {
   chmod +x rg
   rm -f ripgrep-*.*
 
-
   # starship
   echo "Downloading starship..."
   _target="x86_64-unknown-linux-musl"
@@ -116,7 +107,6 @@ build() {
   tar -xf starship-*.tar.gz
   chmod +x starship
   rm -f starship-*.*
-
 
   # zoxide
   echo "Downloading zoxide..."
@@ -131,7 +121,7 @@ build() {
 
 cmd_chk() {
   >&2 echo Check "$1"
-	command -v "$1" >/dev/null 2>&1
+  command -v "$1" >/dev/null 2>&1
 }
 
 need_cmd() {

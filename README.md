@@ -1,4 +1,4 @@
-Collection of cli-tools I use with [xxh](https://github.com/xxh/xxh), inspired by my [dotfiles](https://github.com/ninagrosse/dotfiles). There are plugins for some of the tools already, but I prefer to have a collection of all tools I use in one plugin tailored to my needs. 
+Collection of cli-tools I use with [xxh](https://github.com/xxh/xxh), inspired by my [dotfiles](https://github.com/ninagrosse/dotfiles). There are plugins for some of the tools already, but I prefer to have a collection of all tools I use in one plugin tailored to my needs.
 
 Use in conjunction with [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/ninagrosse/xxh-plugin-zsh-ohmyzsh) to have some handy aliases, as well as preconfigured settings and oh-my-zsh plugins.
 
@@ -11,15 +11,16 @@ Use in conjunction with [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/n
 | fd        | Alternative to `find`                 | [GitHub](https://github.com/sharkdp/fd)              |
 | fzf       | A command-line fuzzy finder           | [GitHub](https://github.com/junegunn/fzf)            |
 | httpie    | A better `curl` for using APIs        | [Website](https://httpie.io/docs/cli/installation)   |
-| lf        | Terminal File Manager                 | [GitHub](https://github.com/gokcehan/lf)             |
 | ripgrep   | Alternative to `grep`                 | [GitHub](https://github.com/BurntSushi/ripgrep)      |
 | starship  | Cross-Platform shell prompt           | [Website](https://starship.rs/guide/)                |
+| yazi      | Terminal File Manager                 | [GitHub](https://github.com/sxyazi/yazi)      |
 | zoxide    | A smart `cd`                          | [GitHub](https://github.com/ajeetdsouza/zoxide)      |
 
 > [!IMPORTANT]
 > Initialization of `starship` and `zoxide` is not handled in `pluginrc`! This happens in [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/ninagrosse/xxh-plugin-zsh-ohmyzsh).
 
 ## Install
+
 ```shell
 xxh +I xxh-plugin-prerun-cli-tools+git+https://github.com/ninagrosse/xxh-plugin-prerun-cli-tools
 ```
