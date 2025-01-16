@@ -84,7 +84,7 @@ build() {
   rm -f yazi ya
 
   curl -s https://api.github.com/repos/sxyazi/yazi/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
-  uunzip -j yazi-*.zip yazi-x86_64-unknown-linux-musl/ya yazi-x86_64-unknown-linux-musl/yazi
+  unzip -j yazi-*.zip yazi-x86_64-unknown-linux-musl/ya yazi-x86_64-unknown-linux-musl/yazi
   chmod +x yazi ya
   rm -f yazi-*.zip
 
