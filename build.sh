@@ -30,6 +30,16 @@ build() {
 
   cd $build_dir
 
+  # atuin
+  echo "Downloading atuin..."
+  _target="x86_64-unknown-linux-musl"
+  rm -f atuin
+
+  curl -s https://api.github.com/repos/atuinsh/atuin/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
+  tar -xf atuin-*.tar.gz --strip-components=1 --wildcards "*/atuin"
+  chmod +x atuin
+  rm -f atuin-*
+
   # bat
   echo "Downloading bat..."
   _target="x86_64-unknown-linux-musl"
