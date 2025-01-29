@@ -4,20 +4,19 @@ Use in conjunction with [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/n
 
 ## Included Tools
 
-| Name      | Description                           | Source                                               |
-| --------- | ------------------------------------- | -----------------------------------------------------|
-| bat       | Alternative to `cat`                  | [GitHub](https://github.com/sharkdp/bat)             |
-| eza       | Alternative to `ls`                   | [GitHub](https://github.com/eza-community/eza)       |
-| fd        | Alternative to `find`                 | [GitHub](https://github.com/sharkdp/fd)              |
-| fzf       | A command-line fuzzy finder           | [GitHub](https://github.com/junegunn/fzf)            |
-| httpie    | A better `curl` for using APIs        | [Website](https://httpie.io/docs/cli/installation)   |
-| ripgrep   | Alternative to `grep`                 | [GitHub](https://github.com/BurntSushi/ripgrep)      |
-| starship  | Cross-Platform shell prompt           | [Website](https://starship.rs/guide/)                |
-| yazi      | Terminal File Manager                 | [GitHub](https://github.com/sxyazi/yazi)      |
-| zoxide    | A smart `cd`                          | [GitHub](https://github.com/ajeetdsouza/zoxide)      |
+* [atuin](https://github.com/atuinsh/atuin)
+* [bat](https://github.com/sharkdp/bat)
+* [eza](https://github.com/eza-community/eza)
+* [fd](https://github.com/sharkdp/fd)
+* [fzf](https://github.com/junegunn/fzf)
+* [httpie](https://httpie.io/docs/cli/installation)
+* [ripgrep](https://github.com/BurntSushi/ripgrep)
+* [starship](https://starship.rs/guide/)
+* [yazi](https://github.com/sxyazi/yazi)
+* [zoxide](https://github.com/ajeetdsouza/zoxide)
 
 > [!IMPORTANT]
-> Initialization of `starship` and `zoxide` is not handled in `pluginrc`! This happens in [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/ninagrosse/xxh-plugin-zsh-ohmyzsh).
+> Initialization of `atuin`, `starship` and `zoxide` is not handled in `pluginrc`! This happens in [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/ninagrosse/xxh-plugin-zsh-ohmyzsh).
 
 ## Install
 
