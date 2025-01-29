@@ -24,6 +24,7 @@ build() {
 
   rm -rf $build_dir
   mkdir -p $build_dir
+  mkdir -p $build_dir/.config
 
   cd $CDIR
   cp *prerun.sh *pluginrc.* $build_dir/
@@ -34,21 +35,21 @@ build() {
   echo "Downloading atuin..."
   _target="x86_64-unknown-linux-musl"
   rm -f atuin
-
   curl -s https://api.github.com/repos/atuinsh/atuin/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
   tar -xf atuin-*.tar.gz --strip-components=1 --wildcards "*/atuin"
   chmod +x atuin
   rm -f atuin-*
+  cp -RL $HOME/.config/atuin $build_dir/.config/
 
   # bat
   echo "Downloading bat..."
   _target="x86_64-unknown-linux-musl"
   rm -f bat
-
   curl -s https://api.github.com/repos/sharkdp/bat/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
   tar -xf bat-*.tar.gz --strip-components=1 --wildcards "*/bat"
   chmod +x bat
   rm -f bat-*.tar.gz
+  cp -RL $HOME/.config/bat $build_dir/.config/
 
   # eza
   echo "Downloading eza..."
@@ -92,11 +93,11 @@ build() {
   echo "Downloading yazi..."
   _target="x86_64-unknown-linux-musl"
   rm -f yazi ya
-
   curl -s https://api.github.com/repos/sxyazi/yazi/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
   unzip -j yazi-*.zip yazi-x86_64-unknown-linux-musl/ya yazi-x86_64-unknown-linux-musl/yazi
   chmod +x yazi ya
   rm -f yazi-*.zip
+  cp -RL $HOME/.config/yazi $build_dir/.config/
 
   # ripgrep
   echo "Downloading ripgrep..."
