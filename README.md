@@ -18,6 +18,9 @@ Use in conjunction with [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/n
 > [!IMPORTANT]
 > Initialization of `atuin`, `starship` and `zoxide` is not handled in `pluginrc`! This happens in [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/ninagrosse/xxh-plugin-zsh-ohmyzsh).
 
+> [!IMPORTANT]
+> Config files for `atuin`, `bat` and `yazi` are copied from the local `$HOME/.config` and are then symlinked to xxh's `$XDG_CONFIG_HOME` on the remote host.
+
 ## Install
 
 ```shell
