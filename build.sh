@@ -85,6 +85,16 @@ build() {
   ln -s ./http ./https
   chmod +x ./http ./https
 
+  # neovim
+  echo "Downloading neovim..."
+  _target="linux-x86_64.tar.gz"
+  rm -rf nvim-linux-x86_64
+  rm -f nvim
+  curl -s https://api.github.com/repos/neovim/neovim-releases/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
+  tar -xf nvim-*.tar.gz
+  ln -s nvim-linux-x86_64/bin/nvim nvim
+  rm -f nvim-*.*
+
   # ripgrep
   echo "Downloading ripgrep..."
   _target="x86_64-unknown-linux-musl"
