@@ -55,7 +55,6 @@ build() {
   echo "Downloading eza..."
   _target="x86_64-unknown-linux-musl"
   rm -f eza
-
   curl -s https://api.github.com/repos/eza-community/eza/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
   tar -xf eza_*.tar.gz --strip-components=1 --wildcards "*/eza"
   chmod +x eza
@@ -65,7 +64,6 @@ build() {
   echo "Downloading fd..."
   _target="x86_64-unknown-linux-musl"
   rm -f fd
-
   curl -s https://api.github.com/repos/sharkdp/fd/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
   tar -xf fd-*.tar.gz --strip-components=1 --wildcards "*/fd"
   chmod +x fd
@@ -75,7 +73,6 @@ build() {
   echo "Downloading fzf..."
   _target="linux_amd64"
   rm -f fzf
-
   curl -s https://api.github.com/repos/junegunn/fzf/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
   tar -xf fzf-*.tar.gz
   chmod +x fzf
@@ -84,10 +81,27 @@ build() {
   # httpie
   echo "Downloading httpie..."
   rm -f http*
-
   curl -L -o http https://packages.httpie.io/binaries/linux/http-latest
   ln -s ./http ./https
   chmod +x ./http ./https
+
+  # ripgrep
+  echo "Downloading ripgrep..."
+  _target="x86_64-unknown-linux-musl"
+  rm -f rg
+  curl -s https://api.github.com/repos/BurntSushi/ripgrep/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
+  tar -xf ripgrep-*.tar.gz --strip-components=1 --wildcards "*/rg"
+  chmod +x rg
+  rm -f ripgrep-*.*
+
+  # starship
+  echo "Downloading starship..."
+  _target="x86_64-unknown-linux-musl"
+  rm -f starship
+  curl -s https://api.github.com/repos/starship/starship/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
+  tar -xf starship-*.tar.gz
+  chmod +x starship
+  rm -f starship-*.*
 
   # yazi
   echo "Downloading yazi..."
@@ -99,31 +113,10 @@ build() {
   rm -f yazi-*.zip
   cp -RL $HOME/.config/yazi $build_dir/.config/
 
-  # ripgrep
-  echo "Downloading ripgrep..."
-  _target="x86_64-unknown-linux-musl"
-  rm -f rg
-
-  curl -s https://api.github.com/repos/BurntSushi/ripgrep/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
-  tar -xf ripgrep-*.tar.gz --strip-components=1 --wildcards "*/rg"
-  chmod +x rg
-  rm -f ripgrep-*.*
-
-  # starship
-  echo "Downloading starship..."
-  _target="x86_64-unknown-linux-musl"
-  rm -f starship
-
-  curl -s https://api.github.com/repos/starship/starship/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
-  tar -xf starship-*.tar.gz
-  chmod +x starship
-  rm -f starship-*.*
-
   # zoxide
   echo "Downloading zoxide..."
   _target="x86_64-unknown-linux-musl"
   rm -f zoxide
-
   curl -s https://api.github.com/repos/ajeetdsouza/zoxide/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
   tar -xf zoxide-*.tar.gz zoxide
   chmod +x zoxide
