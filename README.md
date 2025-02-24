@@ -10,6 +10,7 @@ Use in conjunction with [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/n
 * [fd](https://github.com/sharkdp/fd)
 * [fzf](https://github.com/junegunn/fzf)
 * [httpie](https://httpie.io/docs/cli/installation)
+* [Neovim](https://github.com/neovim/neovim)
 * [ripgrep](https://github.com/BurntSushi/ripgrep)
 * [starship](https://starship.rs/guide/)
 * [yazi](https://github.com/sxyazi/yazi)
@@ -19,7 +20,7 @@ Use in conjunction with [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/n
 > Initialization of `atuin`, `starship` and `zoxide` is not handled in `pluginrc`! This happens in [ninagrosse/xxh-plugin-zsh-ohmyzsh](https://github.com/ninagrosse/xxh-plugin-zsh-ohmyzsh).
 
 > [!IMPORTANT]
-> Config files for `atuin`, `bat` and `yazi` are copied from the local `$HOME/.config` and are then symlinked to xxh's `$XDG_CONFIG_HOME` on the remote host.
+> Config files for some tools are copied from the local `$HOME/.config` and are then symlinked to xxh's `$XDG_CONFIG_HOME` on the remote host. Neovim uses my minimal config which can be fount at [ninagrosse/minimal-nvim](https://github.com/ninagrosse/minimal-nvim)
 
 ## Install
 

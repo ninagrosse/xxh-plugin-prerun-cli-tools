@@ -94,6 +94,7 @@ build() {
   tar -xf nvim-*.tar.gz
   ln -s nvim-linux-x86_64/bin/nvim nvim
   rm -f nvim-*.*
+  cp -RL $HOME/.config/minimal-nvim $build_dir/.config/
 
   # ripgrep
   echo "Downloading ripgrep..."

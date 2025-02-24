@@ -12,6 +12,10 @@ if [[ ! -L $XDG_CONFIG_HOME/bat ]]; then
   bat cache --build # rebuild cache so bat picks up Catppuccin Mocha theme
 fi
 
+if [[ ! -L $XDG_CONFIG_HOME/nvim ]]; then
+  ln -s $CURR_DIR/.config/minimal-nvim $XDG_CONFIG_HOME/nvim
+fi
+
 if [[ ! -L $XDG_CONFIG_HOME/yazi ]]; then
   ln -s $CURR_DIR/.config/yazi $XDG_CONFIG_HOME/yazi
 fi
