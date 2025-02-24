@@ -84,6 +84,7 @@ build() {
   curl -L -o http https://packages.httpie.io/binaries/linux/http-latest
   ln -s ./http ./https
   chmod +x ./http ./https
+  cp -RL $HOME/.config/httpie $build_dir/.config/
 
   # neovim
   echo "Downloading neovim..."
