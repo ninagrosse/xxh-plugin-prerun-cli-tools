@@ -88,12 +88,12 @@ build() {
 
   # neovim
   echo "Downloading neovim..."
-  _target="linux-x86_64.tar.gz"
-  rm -rf nvim-linux-x86_64
+  _target="appimage"
+  rm -rf squashfs-root
   rm -f nvim
   curl -s https://api.github.com/repos/neovim/neovim-releases/releases/latest | grep "browser_download_url" | cut -d '"' -f 4 | grep "$_target" | xargs -n 1 curl -LJO
-  tar -xf nvim-*.tar.gz
-  ln -s nvim-linux-x86_64/bin/nvim nvim
+  ./nvim-linux-x86_64.appimage --appimage-extract
+  ln -s squashfs-root/usr/bin/nvim nvim
   rm -f nvim-*.*
   cp -RL $HOME/.config/minimal-nvim $build_dir/.config/
 
