@@ -31,6 +31,12 @@ build() {
 
   cd $build_dir
 
+  # ohmyzsh
+  ohmyzsh_home=$build_dir/ohmyzsh
+  git clone --depth 1 https://github.com/ohmyzsh/ohmyzsh.git $ohmyzsh_home
+  git clone --depth 1 https://github.com/zsh-users/zsh-autosuggestions $ohmyzsh_home/custom/plugins/zsh-autosuggestions
+  git clone --depth 1 https://github.com/zsh-users/zsh-syntax-highlighting.git $ohmyzsh_home/custom/plugins/zsh-syntax-highlighting
+
   # atuin
   echo "Downloading atuin..."
   _target="x86_64-unknown-linux-musl"
